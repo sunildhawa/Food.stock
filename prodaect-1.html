@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodgo Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+  /* बेसिक रीसेट */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* हेडर */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.logo, .profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 24px;
+  color: #333;
+}
+
+/* सर्च और फ़िल्टर */
+.search-filter {
+  display: flex;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter-btn {
+  padding: 8px 12px;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+/* टैब्स */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f8f8f8;
+  padding: 10px 0;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #555;
+}
+
+.tab.active {
+  border-bottom: 2px solid #ff6347;
+  color: #ff6347;
+}
+
+/* फूड ग्रिड */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.food-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.food-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.food-name {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.food-subtitle {
+  font-size: 14px;
+  color: #777;
+}
+
+.food-rating {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #ff6347;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #ff6347;
+}
+
+/* बॉटम नेविगेशन बार */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #555;
+}
+
+.plus-btn {
+  background-color: #ff6347;
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  margin-top: -20px;
+}
+@media (max-width: 600px) {
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+  img {
+  max-width: 100%;
+  height: auto;
+}
+
+}
+
+
+</style>
+<body>
+
+  <!-- हेडर -->
+  <header class="header">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <h1 class="title">Foodgo</h1>
+    <img src="WhatsApp Image 2025-06-02 at 22.36.12_f703635c.jpg" alt="Profile" class="profile" />
+  </header>
+
+  <!-- सर्च और फ़िल्टर -->
+  <section class="search-filter">
+    <input type="text" placeholder="Search food..." class="search-bar" />
+    <button class="filter-btn">Filter</button>
+  </section>
+
+  <!-- टैब्स -->
+  <nav class="tabs">
+    <button class="tab active">All</button>
+    <button class="tab">Sliders</button>
+    <button class="tab">Combos</button>
+  </nav>
+
+  <!-- फूड आइटम्स ग्रिड -->
+  <section class="food-grid">
+    <div class="food-card">
+      <img style="height: 50px;width: 50px;" src="pngwing 1.png" alt="Burger" class="food-img" />
+      <h2 class="food-name">Cheese Burger</h2>
+      <p class="food-subtitle">Delicious beef burger</p>
+      <div class="food-rating">⭐ 4.5</div>
+      <button class="favorite-btn">❤️</button>
+    </div>
+    <!-- अन्य फूड कार्ड्स यहां जोड़ें -->
+  </section>
+ <section class="food-grid">
+    <div class="food-card">
+      <img style="height: 50px;width: 50px;" src="shopping.webp" alt="Burger" class="food-img" />
+      <h2 class="food-name">Cheese Ice Cream</h2>
+      <p class="food-subtitle">Amul Ice Cream</p>
+      <div class="food-rating">⭐ 4.5</div>
+      <button class="favorite-btn">❤️</button>
+    </div>
+    <!-- अन्य फूड कार्ड्स यहां जोड़ें -->
+  </section>
+   <section class="food-grid">
+    <div class="food-card">
+      <img style="height: 50px;width: 50px;" src="bttter.jpg" alt="Burger" class="food-img" />
+      <h2 class="food-name">Cheese butter</h2>
+      <p class="food-subtitle">peanut butter stockr</p>
+      <div class="food-rating">⭐ 4.5</div>
+      <button class="favorite-btn">❤️</button>
+    </div>
+    <!-- अन्य फूड कार्ड्स यहां जोड़ें -->
+  </section>
+   <section class="food-grid">
+    <div class="food-card">
+      <img style="height: 100px;width: 50px;" src="shopping (2).webp" alt="Burger" class="food-img" />
+      <h2 class="food-name">Cheese Sprite</h2>
+      <p class="food-subtitle">Sprite 2.25 L</p>
+      <div class="food-rating">⭐ 4.5</div>
+      <button class="favorite-btn">❤️</button>
+    </div>
+    <!-- अन्य फूड कार्ड्स यहां जोड़ें -->
+  </section>
+  <!-- बॉटम नेविगेशन बार -->
+  <nav class="bottom-nav">
+    <button class="nav-btn">🏠</button>
+    <button class="nav-btn">🛒</button>
+    <button class="nav-btn plus-btn">➕</button>
+    <button class="nav-btn">🔔</button>
+    <button class="nav-btn">👤</button>
+  </nav>
+
+</body>
+</html>
