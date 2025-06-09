@@ -1,0 +1,2 @@
+# Food.stock
+Im happy
